@@ -1,4 +1,4 @@
-**Predicción de Ventas de Rossmann
+**Predicción de Ventas de Rossmann**
 Descripción
 Este proyecto tiene como objetivo predecir las ventas diarias de las tiendas Rossmann utilizando técnicas de Machine Learning. Se han empleado varios algoritmos de regresión y métodos avanzados como RandomizedSearchCV y SHAP para optimizar el rendimiento del modelo y proporcionar interpretaciones detalladas sobre la importancia de las características.
 
