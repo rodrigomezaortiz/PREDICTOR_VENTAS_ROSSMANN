@@ -31,8 +31,9 @@ Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
 Clona este repositorio:
 
-# git clone https://github.com/rodrigomezaortiz/PREDICTOR_VENTAS_ROSSMANN.git 
-# cd PREDICTOR_VENTAS_ROSSMANN 
+git clone https://github.com/rodrigomezaortiz/PREDICTOR_VENTAS_ROSSMANN.git 
+
+#cd PREDICTOR_VENTAS_ROSSMANN 
 Instala las dependencias del proyecto utilizando pip:
 
 pip install -r requirements.txt
