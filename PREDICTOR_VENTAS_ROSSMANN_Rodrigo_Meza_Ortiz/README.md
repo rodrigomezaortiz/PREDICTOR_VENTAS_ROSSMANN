@@ -70,9 +70,6 @@ En este proyecto se han utilizado varios modelos de regresión para predecir las
 - **Gradient Boosting**
 - **Regresión Ridge**
 - **KMeans Clustering**
+- **Red Neuronal**
 
-Cada modelo ha sido entrenado y evaluado. El mejor rendimiento se obtuvo con `Random Forest`, el cuál se optimizó mediante `RandomizedSearchCV`.
-
-## Interpretación del Modelo
-
-Se utilizó `SHAP` para interpretar el modelo final y entender la importancia de cada característica en la predicción de las ventas. 
+Cada modelo ha sido entrenado y evaluado. El mejor rendimiento se obtuvo con `Random Forest`, el cuál se optimizó mediante `RandomizedSearchCV`. 
