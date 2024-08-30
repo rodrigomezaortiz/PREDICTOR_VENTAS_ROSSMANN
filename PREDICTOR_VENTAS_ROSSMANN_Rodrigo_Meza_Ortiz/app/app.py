@@ -42,7 +42,7 @@ def main():
     - **StateHoliday_c**: Indica si es un feriado estatal tipo c.
     """)
 
-    model = joblib.load('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/models/final_model.pkl', mmap_mode='r')
+    model = joblib.load('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/models/final_model.pkl', mmap_mode='r')
     
     uploaded_file = st.file_uploader("Suba el archivo CSV con los datos de prueba", type="csv")
     
