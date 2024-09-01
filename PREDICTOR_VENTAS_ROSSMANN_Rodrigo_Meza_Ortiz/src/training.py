@@ -8,17 +8,17 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, R
 from sklearn.cluster import KMeans
 import joblib
 
-train_data = pd.read_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/data/processed/train_data_processed.csv')
+train_data = pd.read_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/data/processed/train_data_processed.csv')
 
 X = train_data.drop(columns=['Sales', 'Date'])
 y = train_data['Sales']
 
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-X_train.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/data/train/X_train.csv', index=False)
-X_val.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/data/test/X_val.csv', index=False)
-y_train.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/data/train/y_train.csv', index=False)
-y_val.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/data/test/y_val.csv', index=False)
+X_train.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/data/train/X_train.csv', index=False)
+X_val.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/data/test/X_val.csv', index=False)
+y_train.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/data/train/y_train.csv', index=False)
+y_val.to_csv('C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/data/test/y_val.csv', index=False)
 
 models = {
     'XGBoost': xgb.XGBRegressor(random_state=42),
@@ -27,12 +27,12 @@ models = {
     'Random Forest': RandomForestRegressor(random_state=42),
     'Gradient Boosting': GradientBoostingRegressor(random_state=42),
     'Ridge Regression': Ridge(random_state=42),
-    'Clustering': KMeans(n_clusters=3, random_state=42)
+    'Clustering': KMeans(n_clusters=4, random_state=42)
 }
 
 for name, model in models.items():
     model.fit(X_train, y_train)
-    joblib.dump(model, f'C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/models/trained_model_{name.replace(" ", "_").lower()}.pkl')
+    joblib.dump(model, f'C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/models/trained_model_{name.replace(" ", "_").lower()}.pkl')
 
 final_model = models['Random Forest']
-joblib.dump(final_model, 'C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN/models/final_model.pkl') 
+joblib.dump(final_model, 'C:/Users/rodri/OneDrive/Escritorio/PREDICTOR_VENTAS_ROSSMANN_Rodrigo_Meza_Ortiz/models/final_model.pkl') 
